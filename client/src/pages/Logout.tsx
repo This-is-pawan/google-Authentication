@@ -8,7 +8,7 @@ const LogoutButton = () => {
   const handleLogout = async () => {
     try {
       // 1️⃣ Call backend to destroy passport session
-       await axios.get("http://localhost:5000/api/logout", {
+       await axios.get("https://google-authentication-idvf.onrender.com/api/logout", {
         withCredentials: true, 
       });
 
