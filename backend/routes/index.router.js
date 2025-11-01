@@ -27,11 +27,11 @@ router.get(
 router.get(
   "/login-with-google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173/failed",
+    failureRedirect: "https://google-authentication-frontend.onrender.com/failed",
   }),
   (req, res) => {
     const user = req.user;
-    const redirectURL = `http://localhost:5173/success?name=${encodeURIComponent(
+    const redirectURL = `https://google-authentication-frontend.onrender.com/success?name=${encodeURIComponent(
       user.displayName
     )}&email=${encodeURIComponent(user.email)}&photo=${encodeURIComponent(
       user.photo
@@ -60,7 +60,7 @@ router.get("/logout", (req, res, next) => {
   req.logout((err) => {
     if (err) return next(err);
     req.session.destroy(() => {
-      res.redirect("http://localhost:5173/");
+      res.redirect("https://google-authentication-frontend.onrender.com/");
     });
   });
 });
