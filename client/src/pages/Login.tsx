@@ -1,6 +1,6 @@
 const Login = () => {
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/api/login-with-google";
+    window.location.href = "https://google-authentication-idvf.onrender.com/api/login-with-google";
   };
 
   return (
