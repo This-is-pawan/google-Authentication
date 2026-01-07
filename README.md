@@ -1,7 +1,7 @@
 in this code
  vite+server+mongodb autentication are avaliable
 Hey team 👋  
-Main ek full-stack project step by step bana raha hoon, zyada tar akela (solo) kaam kar raha hoon.
+Main ek full-stack project step by step bana raha hoon, zyada tar akela  kaam kar raha hoon.
 
 Mujhe pata hai sab log busy rehte ho, lekin agar kisi ke paas thoda time ho
 aur wo review ya improvements suggest kar sake,
