@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Login</title>
+
+  <style>
+    .btn {
+      width: 200px;
+      padding: 10px;
+      background: pink;
+      color: black;
+      border: none;
+      cursor: pointer;
+    }
+    img {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<% if (!user) { %>
+  <!-- Not logged in -->
+  <button class="btn">
+    <a href="/login-with-google">Login with Google</a>
+  </button>
+
+<% } else { %>
+  <!-- Logged in -->
+  <h2>Welcome, <%= user.name %></h2>
+  <p>Email: <%= user.email %></p>
+  <img src="<%= user.photo %>" width="100" />
+
+  <br /><br />
+  <a href="/logout">Logout</a>
+<% } %>
+
+</body>
+</html>
