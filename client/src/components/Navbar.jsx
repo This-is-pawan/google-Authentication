@@ -12,7 +12,7 @@ const Navbar = ({ user }) => {
       <h2 className="font-bold">My App</h2>
 
       {user ? (
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3"> 
           {user.photo && (
             <img
               src={user.photo}
@@ -26,7 +26,7 @@ const Navbar = ({ user }) => {
 
           <button
             onClick={logout}
-            className="bg-red-500 text-white px-3 py-1 rounded"
+            className="bg-red-500 text-white px-3 py-1 rounded" 
           >
             Logout
           </button>
