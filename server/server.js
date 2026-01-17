@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin:process.env.FRONTEND,
     credentials: true,
   })
 );
@@ -69,17 +69,17 @@ app.get("/api/auth/user", (req, res) => {
 app.get(
   "/login-with-google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173/login",
+    failureRedirect:`http://localhost:3000/login`,
   }),
   (req, res) => {
     // success
-    res.redirect("http://localhost:5173");
+    res.redirect(process.env.FRONTEND);
   }
 );
 
 app.get("/logout", (req, res) => {
   req.logout(() => {
-    res.redirect('http://localhost:5173');
+    res.redirect(process.env.FRONTEND);
   });
 });
 

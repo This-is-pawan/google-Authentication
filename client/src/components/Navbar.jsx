@@ -1,10 +1,11 @@
+// axios.defaults.withCredentials = true;
 const Navbar = ({ user }) => {
   const googleLogin = () => {
-    window.open("http://localhost:3000/login-with-google", "_self");
+    window.open(`${import.meta.env.VITE_URI}/login-with-google`, "_self");
   };
 
   const logout = () => {
-    window.open("http://localhost:3000/logout", "_self");
+    window.open(`${import.meta.env.VITE_URI}/logout`, "_self");
   };
   return (
     <div className="flex justify-between p-4 bg-gray-200">
