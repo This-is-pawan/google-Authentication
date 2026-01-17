@@ -6,7 +6,6 @@ const Navbar = ({ user }) => {
   const logout = () => {
     window.open("http://localhost:3000/logout", "_self");
   };
-
   return (
     <div className="flex justify-between p-4 bg-gray-200">
       <h2 className="font-bold">My App</h2>
@@ -22,7 +21,7 @@ const Navbar = ({ user }) => {
           )}
           <span>{user?.name?.split(" ")[0]}</span>
 
-          <span className="text-sm text-gray-600">{user.email}</span>
+          <span className="text-sm text-gray-600">{user?.email}</span>
 
           <button
             onClick={logout}

@@ -13,14 +13,11 @@ function App() {
         const res = await axios.get(
           "http://localhost:3000/api/auth/user"
         );
-
-       
         setUser(res.data.user); 
       } catch (err) {
         setUser(null);
       }
-    };
-
+    }; 
     getUser();
   }, []);
 

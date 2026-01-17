@@ -23,6 +23,6 @@ const GUser = new mongoose.Schema(
   { timestamps: true }
 );
 
-const GoogleUser = mongoose.model("Google_auth_StackNexa", GUser);
+const GoogleUser = mongoose.model("Google_auth", GUser);
 
 module.exports = { GoogleUser };
